@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation Engine</h1>
+        <div class="search-box">
+            <input type="text" id="movie-input" placeholder="Enter a movie title...">
+            <button id="recommend-btn">Get Recommendations</button>
+        </div>
+        
+        <div id="results">
+            <div class="input-movie" style="display: none;">
+                <h2>Because you liked: <span id="input-title"></span></h2>
+            </div>
+            <div id="recommendations-list"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
